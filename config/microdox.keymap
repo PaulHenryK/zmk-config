@@ -23,7 +23,7 @@
    &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI
    &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O
    &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH
-          &kp LGUI &mo 1 &kp LSHFT &kp SPACE &mo 2 &kp RCTRL
+          &kp LSHFT &mo 2 &kp ESC &kp SPACE &mo 1 &kp RCTRL
                         >;
                 };
 
@@ -36,7 +36,7 @@
 
                         bindings = <
    &kp N1   &kp N2   &kp N3   &kp N4    &kp N5    &kp N6   &kp N7    &kp N8   &kp N9    &kp N0
-   &kp LBKT &kp RBKT &kp LBRC &kp RBRC  &kp ESC   &kp BSPC &kp LPAR  &kp RPAR &kp UNDER &kp EQUAL
+   &kp LBKT &kp RBKT &kp LBRC &kp RBRC  &kp ENTER   &kp BSPC &kp LPAR  &kp RPAR &kp UNDER &kp EQUAL
    &trans   &trans   &kp BSLH &kp TILDE &kp MINUS &kp PLUS &kp GRAVE &kp PIPE &trans    &trans
                      &trans &trans &trans &trans &trans &trans
                         >;
@@ -52,8 +52,8 @@ raise_layer {
                         bindings = <
    &kp C_VOL_DN &kp C_VOL_UP  &kp C_MUTE    &kp C_PP  &trans        &kp C_AC_CUT   &trans   &trans    &trans    &trans
    &bt BT_CLR     &kp C_AC_UNDO &kp C_AC_REDO &kp TAB   &kp C_AC_COPY &kp C_AC_PASTE &trans   &kp UP    &trans    &trans
-   &bootloader    &reset        &trans        &trans    &kp CAPS        &trans         &kp LEFT &kp DOWN  &kp RIGHT &trans
-                                &trans        &trans    &trans        &trans         &trans   &trans
+   &bt BT_NXT    &out OUT_TOG        &bootloader        &reset    &kp CAPS        &trans         &kp LEFT &kp DOWN  &kp RIGHT &trans
+                              &trans        &trans    &trans        &trans         &trans   &trans
                         >;
                 };    
         };
