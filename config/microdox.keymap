@@ -9,64 +9,63 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-        keymap {
+         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T   |   |  Y  |  U   |  I  |  O  |  P  |
-// |  A  |  S  |  D  |  F  |  G   |   |  H  |  J   |  K  |  L  |  ;  |
-// |  Z  |  X  |  C  |  V  |  B   |   |  N  |  M   |  ,  |  .  |  /  |
-//             | GUI | NAV | SHFT |   | SPC | SYM  | ALT |
+// |  Q  |  W  |  E  |  R  |  T  |||||  Y  |  U  |  I  |  O  |  P  |
+// |  A  |  S  |  D  |  F  |  G  |||||  H  |  J  |  K  |  L  |  ;  |
+// |  Z  |  X  |  C  |  V  |  B  |||||  N  |  M  |  ,  |  .  |  /  |
+//             | GUI | LWR | SHFT||||| SPC | SYM | BSP |
                         bindings = <
    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P
    &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI
    &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-          &kp LGUI &mo 1 &kp LSHFT &kp SPACE &mo 2 &kp RALT
-                        >;
-                };
-                nav_layer {
-// -----------------------------------------------------------------------------------------
-// |BTCLR|     | ESC |  ~   |     |   | TAB | HOME |  UP  | END | DEL  |
-// | BT1 | GUI | ALT | CTRL | NUM |   |  /  | LEFT | DOWN | RGT | BKSP |
-// | BT2 |     |     |      |     |   |  \  | ENT  |      |     |      |
-//             |     |      |     |   |     |      |      |
-                        bindings = <
-   &bt BT_CLR   &trans      &kp ESC  &kp TILDE &trans     &kp TAB  &kp HOME &kp UP   &kp END   &kp DEL
-   &bt BT_SEL 0 &kp K_CMENU &kp RALT &kp LCTRL &mo 3      &kp FSLH &kp LEFT &kp DOWN &kp RIGHT &kp BSPC
-   &bt BT_SEL 1 &trans      &trans   &trans    &trans     &kp BSLH &kp RET  &trans   &trans    &trans
-                            &trans   &trans    &trans     &trans   &trans   &trans
+          &kp LGUI &mo 1 &kp LSHFT &kp SPACE &mo 2 &kp BSPC
                         >;
                 };
 
-                sym_layer {
+                lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
-// |     |     |     |     |     |   |  -  |  =  |  {  |  }  | "|" |
-// |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |
-//             | GUI |     | SPC |   | ENT |     | ALT |
+// | ESC | SCT |  CT |     |     ||||| TAB |     |     |     | DEL  |
+// | TAB |     |     | CTRL| NUM |||||  ←  |  ↓  |  ↑  |  →  | BKSP |
+// |     |     |     |     |     |||||     | RET |     |     |      |
+//             |     |     | SHFT||||| SPC | CTRL|     |
                         bindings = <
-   &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR
-   &trans    &trans    &trans    &trans    &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp PIPE
-   &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans          &trans   &kp BSLH
-                       &kp LGUI  &trans    &kp SPACE   &kp RET   &trans    &kp RALT
+   &kp ESC      &kp LS(LC(TAB)) &kp LC(TAB)  &trans    &trans     &kp TAB   &trans    &trans   &trans    &kp DEL
+   &kp TAB      &trans          &trans       &kp LCTRL &mo 3      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &kp BSPC
+   &trans       &trans          &trans       &trans    &trans     &trans    &kp RET   &trans   &trans    &trans
+                                &trans       &trans    &kp LSHFT  &kp SPACE &kp LCTRL &kp BSPC
                         >;
                 };
 
-// This layer is unreachable until "tri layer state" is sorted out.
-// Leaving it here for completeness.
+                raise_layer {
+// -----------------------------------------------------------------------------------------
+// |  !  |  @  |  #  |  $  |  %  |||||  ^  |  &  |  *  |  =  |  \  |
+// |  {  |  (  |  )  |  }  |  ~  |||||  ←  |  ↓  |  ↑  |  →  |  '' |
+// |     |  [  |  ]  |     |     |||||     |  -  |  +  |  `  | RET |
+//             | GUI |     | SHF ||||| SPC |     | ALT |
+                        bindings = <
+   &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp EQUAL &kp BSLH
+   &kp LBRC  &kp LPAR  &kp RPAR  &kp RBRC  &kp TILDE   &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &kp SQT
+   &trans    &kp LBKT  &kp RBKT  &trans    &trans      &none     &kp MINUS &kp PLUS        &kp GRAVE &kp RET
+                       &kp LGUI  &none     &kp LSHFT   &kp SPACE &trans    &kp RALT
+                        >;
+                };
+
                 num_layer {
 // -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |   |  A  |  7  |  8  |  9  |  D  |
-// |     |     |     |     |     |   |  B  |  4  |  5  |  6  |  E  |
-// |     |     |     |     |     |   |  C  |  1  |  2  |  3  |  F  |
-//             |     |     |     |   |  0  |  .  |     |
+// |     | SC 3| SC 4|     |     |||||     |  7  |  8  |  9  |     |
+// |BTCLR|     |     |     |     |||||     |  4  |  5  |  6  |     |
+// | BOOT|     |     |     |     |||||     |  1  |  2  |  3  |     |
+//             |     |     |     |||||  0  |  .  |  ,  |
                         bindings = <
-   &trans &trans &trans &trans &trans    &kp A  &kp N7  &kp N8 &kp N9 &kp D
-   &trans &trans &trans &trans &trans    &kp B  &kp N4  &kp N5 &kp N6 &kp E
-   &trans &trans &trans &trans &trans    &kp C  &kp N1  &kp N2 &kp N3 &kp F
-                 &trans &trans &trans    &kp N0 &kp DOT &trans
+   &none        &kp LG(LS(N3)) &kp LG(LS(N4)) &none  &none     &none  &kp N7  &kp N8 &kp N9 &none
+   &bt BT_CLR   &none          &none          &none  &none     &none  &kp N4  &kp N5 &kp N6 &none
+   &bootloader  &none          &none          &none  &none     &none  &kp N1  &kp N2 &kp N3 &none
+                                       &trans &trans &trans    &kp N0 &kp DOT &kp COMMA
                         >;
                 };
         };
-};
+ };
