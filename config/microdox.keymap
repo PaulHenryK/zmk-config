@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 &mt {
-    quick_tap_ms = <300>;
+    quick_tap_ms = <0>;
     retro-tap;
 };
 
@@ -19,32 +19,12 @@
         combo_ent {
             timeout-ms = <50>;
             key-positions = <3 6>;
-            bindings = <&kp ENTER>;
+            bindings = <&kp TAB>;
         };
         combo_tab {
             timeout-ms = <50>;
             key-positions = <2 7>;
             bindings = <&kp ENTER>;
-        };
-        combo_quote {
-            timeout-ms = <50>;
-            key-positions = <14 15>;
-            bindings = <&kp SQT>;
-        };
-        combo_ques {
-            timeout-ms = <50>;
-            key-positions = <23 26>;
-            bindings = <&kp QUESTION>;
-        };
-        combo_dquote {
-            timeout-ms = <50>;
-            key-positions = <22 26>;
-            bindings = <&kp DQT>;
-        };
-        combo_col {
-            timeout-ms = <50>;
-            key-positions = <4 5>;
-            bindings = <&kp COLON>;
         };
         combo_unds {
             timeout-ms = <50>;
