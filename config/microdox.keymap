@@ -21,6 +21,11 @@
             key-positions = <3 6>;
             bindings = <&kp ENTER>;
         };
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <2 7>;
+            bindings = <&kp ENTER>;
+        };
         combo_quote {
             timeout-ms = <50>;
             key-positions = <14 15>;
@@ -56,18 +61,6 @@
 
 / {
 
-behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-    };
-
 keymap {
                 compatible = "zmk,keymap";
 
@@ -75,9 +68,9 @@ keymap {
                 
                         bindings = <
    &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI
-   &mt LCTRL A &hm LALT R &hm LGUI S &hm LSHIFT T &kp G   &kp M &hm RSHIFT N  &hm RGUI E &hm RALT I &hm RCTRL O
+   &mt LCTRL A &mt LALT R &mt LGUI S &mt LSHIFT T &kp G   &kp M &mt RSHIFT N  &mt RGUI E &mt RALT I &mt RCTRL O
    &kp X &kp C &kp D &kp V &kp Z   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH
-          &kp TAB &lt 2 ESC &kp SPACE &kp BSPC &lt 1 ENTER &kp RC(RS(V))
+          &kp LGUI &lt 2 ESC &kp BSPC &kp SPACE &lt 1 ENTER &kp RALT
                         >;
                 };
 
