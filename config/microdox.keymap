@@ -13,12 +13,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  F  |  P  |   B  |||||  J  |  L  |  U  |  Y  |  ;  |
-// |  A  |  R  |  S  |  T  |   G  |||||  M  |  N  |  E  |  I  |  O  |
-// |  Z  |  X  |  C  |  D  |   V  |||||  K  |  H  |  ,  |  .  |  /  |
-//             | GUI | LWR | SHFT ||||| SPC | SYM | RCTRL |
-
+                
                         bindings = <
    &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI
    &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O
@@ -28,11 +23,6 @@
                 };
 
                 lower_layer {
-// -----------------------------------------------------------------------------------------
-// | 1 | 2 | 3 | 4 |  5  |||||  6   | 7 | 8 | 9 | 0 |
-// | [ | ] | { | } | ESC ||||| BACK | ( | ) | _ | = |
-// |   |   | \ | ~ |  -  |||||  +   | ` | | |   |   |
-//         |   |   |     |||||      |   |   |
 
                         bindings = <
    &kp N1   &kp N2   &kp N3   &kp N4    &kp N5    &kp N6   &kp N7    &kp N8   &kp N9    &kp N0
@@ -42,12 +32,7 @@
                         >;
                 };
                 
-raise_layer {
-// -----------------------------------------------------------------------------------------
-// | VUP | VDO | VMU |     |     |||||     |     |  ↑  |     |     |
-// |     |     |     | TAB |     |||||     |  ←  |  ↓  |  →  |     |
-// |     |     |     |     |     |||||     |     |     |     |     |
-//             |     |     |     |||||     |     |     |
+                raise_layer {
 
                         bindings = <
    &kp C_VOL_DN &kp C_VOL_UP  &kp C_MUTE    &kp C_PP  &trans        &kp C_AC_CUT   &trans   &trans    &trans    &trans
