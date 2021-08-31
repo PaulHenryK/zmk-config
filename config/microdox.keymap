@@ -44,7 +44,7 @@ keymap {
    &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI
    &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E &kp I &kp O
    &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH
-          &kp LGUI &lt 2 ESC &kp SPACE &kp LSHFT &lt 1 ENTER &mt LALT BSPC
+          &kp LGUI &lt 1 ESC &kp SPACE &kp LSHFT &lt 2 ENTER &mt LALT BSPC
          >;
                 };
 
