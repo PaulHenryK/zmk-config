@@ -23,7 +23,7 @@
         };
         combo_shift {
             timeout-ms = <50>;
-            key-positions = <32 35w>;
+            key-positions = <32 35>;
             bindings = <&kp RSHFT>;
         };
         combo_mins {
