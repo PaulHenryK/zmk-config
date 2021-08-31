@@ -21,20 +21,10 @@
             key-positions = <2 7>;
             bindings = <&kp ENTER>;
         };
-        combo_lshift {
+        combo_shift {
             timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp LSHFT>;
-        };
-        combo_rshift {
-            timeout-ms = <50>;
-            key-positions = <16 17>;
+            key-positions = <32 35w>;
             bindings = <&kp RSHFT>;
-        };
-        combo_unds {
-            timeout-ms = <50>;
-            key-positions = <24 25>;
-            bindings = <&kp UNDER>;
         };
         combo_mins {
             timeout-ms = <50>;
@@ -55,17 +45,17 @@ keymap {
    &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI
    &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E &kp I &kp O
    &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH
-          &kp LGUI &lt 2 ESC &kp SPACE &kp BSPC &lt 1 ENTER &kp RCTRL
+          &kp LGUI &lt 2 ESC &kp SPACE &kp BSPC &lt 1 ENTER &kp LCTRL
           >;
                 };
 
                 lower_layer {
 
-                        bindings = <
+                        bindings = < 
+   &kp EXCL &kp AT &kp DOLLAR &kp PLUS &kp PERCENT &kp STAR &kp EQUAL &kp UNDER &kp HASH &kp PIPE
    &kp N1   &kp N2   &kp N3   &kp N4    &kp N5    &kp N6   &kp N7    &kp N8   &kp N9    &kp N0
-   &kp LBKT &kp RBKT &kp LBRC &kp RBRC  &kp ENTER   &kp BSPC &kp LPAR  &kp RPAR &kp UNDER &kp EQUAL
-   &trans   &trans   &kp BSLH &kp TILDE &kp MINUS &kp PLUS &kp GRAVE &kp PIPE &trans    &trans
-                     &trans &trans &trans &trans &trans &trans
+   &kp LBKT   &kp RBKT &kp LBRC &kp RBRC &kp TILDE &kp AMPS &kp LPAR &kp RPAR &kp CARET &kp BSLH
+                    &kp GRAVE &kp SQT &kp DQT &trans &trans &trans
                         >;
                 };
                 
