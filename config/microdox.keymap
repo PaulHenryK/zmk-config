@@ -11,24 +11,68 @@
 / {
     combos {
         compatible = "zmk,combos";
+        
         combo_esc {
             timeout-ms = <50>;
             key-positions = <12 17>;
             bindings = <&kp ESC>;
         };
+        
         combo_ent {
             timeout-ms = <50>;
             key-positions = <13 16>;
             bindings = <&kp ENTER>;
-        };combo_tab {
+        };
+        
+         combo_tab {
             timeout-ms = <50>;
             key-positions = <11 18>;
             bindings = <&kp TAB>;
-        };combo_minus {
+        };
+        
+        combo_minus {
             timeout-ms = <50>;
             key-positions = <14 15>;
             bindings = <&kp MINUS>;
-        };};
+        };
+        
+        hm_llalt {
+            timeout-ms = <50>;
+            key-positions = <11 12>;
+            bindings = <&kp LALT>;
+        };
+        
+        hm_llctrl {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&kp LCTRL>;
+        };
+        
+        hm_llgui {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp LGUI>;
+        };
+        
+        hm_rlctrl {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp LCTRL>;
+        };
+        
+        hm_rlalt {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp LALT>;
+        };
+        
+        hm_rlgui {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&kp LGUI>;
+        };
+        
+    };
 };
 
 / {
