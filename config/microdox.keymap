@@ -17,17 +17,22 @@
         compatible = "zmk,combos";
         combo_ent {
             timeout-ms = <50>;
-            key-positions = <3 6>;
-            bindings = <&kp TAB>;
+            key-positions = <14 17>;
+            bindings = <&kp ENTER>;
+        };
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <13 18>;
+            bindings = <&kp ESC>;
         };
         combo_tab {
             timeout-ms = <50>;
-            key-positions = <2 7>;
-            bindings = <&kp ENTER>;
+            key-positions = <12 19>;
+            bindings = <&kp TAB>;
         };
         combo_mins {
             timeout-ms = <50>;
-            key-positions = <13 16>;
+            key-positions = <15 16>;
             bindings = <&kp MINUS>; 
         };
     };
@@ -44,15 +49,15 @@ keymap {
    &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI
    &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E &kp I &kp O
    &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH
-           &kp LGUI &lt 1 ENTER &kp LSHFT &kp SPACE &lt 2 ESC &mt LALT BSPC                                                                                          
+           &kp LGUI &mo 1 &kp LSHFT &kp SPACE &mo 2 &kp BSPC                                                                                          
            >;
                 };
 
                 lower_layer {
 
                         bindings = < 
-   &kp EXCL &kp AT &kp DOLLAR &kp PLUS &kp PERCENT &kp STAR &kp EQUAL &kp UNDER &kp HASH &kp PIPE
    &kp N1   &kp N2   &kp N3   &kp N4    &kp N5    &kp N6   &kp N7    &kp N8   &kp N9    &kp N0
+   &kp EXCL &kp AT &kp DOLLAR &kp PLUS &kp PERCENT &kp STAR &kp EQUAL &kp UNDER &kp HASH &kp PIPE
    &kp LBKT   &kp RBKT &kp LBRC &kp RBRC &kp TILDE &kp AMPS &kp LPAR &kp RPAR &kp CARET &kp BSLH
                     &trans &trans &trans  &kp SQT &kp DQT &kp GRAVE  
                     >;
