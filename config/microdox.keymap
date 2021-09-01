@@ -121,9 +121,9 @@ keymap {
                 raise_layer {
 
                         bindings = <
-   &kp C_VOL_DN &kp C_VOL_UP  &kp C_MUTE    &kp C_PP  &trans        &kp C_AC_CUT   &trans   &trans    &trans    &trans
-   &bt BT_CLR     &kp C_AC_UNDO &kp C_AC_REDO &kp TAB   &kp C_AC_COPY &kp C_AC_PASTE &trans   &kp UP    &trans    &trans
-   &bt BT_NXT    &trans    &bootloader        &reset    &kp CAPS        &trans         &kp LEFT &kp DOWN  &kp RIGHT &trans
+   &kp C_VOL_DN &kp C_VOL_UP  &kp C_MUTE    &kp C_PP  &trans        &kp C_AC_CUT   &trans   &kp UP    &trans    &trans
+   &bt BT_CLR     &kp C_AC_UNDO &kp C_AC_REDO &kp TAB   &kp C_AC_COPY &kp C_AC_PASTE &kp LEFT   &kp DOWN    &kp RIGHT    &trans
+   &bt BT_NXT    &trans    &bootloader        &reset    &kp CAPS        &trans         &trans &trans  &trans &trans
                               &trans        &trans    &trans        &trans         &trans   &trans
                         >;
                 };    
