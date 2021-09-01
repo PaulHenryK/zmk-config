@@ -32,7 +32,7 @@
         
         combo_back {
             timeout-ms = <50>;
-            key-positions = <11 18>;
+            key-positions = <10 19>;
             bindings = <&kp BSPC>;
         };
         
@@ -60,6 +60,12 @@
             bindings = <&kp LCTRL>;
         };
         
+        hm_llshift {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp LSHIFT>;
+        };
+        
         hm_rlgui {
             timeout-ms = <50>;
             key-positions = <16 17>;
@@ -76,6 +82,12 @@
             timeout-ms = <50>;
             key-positions = <15 16>;
             bindings = <&kp LCTRL>;
+        };
+        
+        hm_llshift {
+            timeout-ms = <50>;
+            key-positions = <10 11>;
+            bindings = <&kp LSHIFT>;
         };
         
     };
